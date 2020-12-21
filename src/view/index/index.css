@@ -1,0 +1,388 @@
+.container{
+    min-width: 1060px;
+    background: #fff;
+}
+
+
+.idx-header{
+    position: fixed;
+    height: 70px;
+    padding: 0 20px;
+    line-height: 70px;
+    width: 100%;
+    min-width: 1060px;
+    background: #fff;
+}
+
+.idx-header.s_down{
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+}
+
+
+.idx-header .ids-actions{
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.idx-header .ids-actions ul{
+    display: flex;
+    align-items: center;
+}
+
+.idx-header .ids-actions ul li{
+    margin-left: 24px;
+    font: 13px/23px 'PingFang SC',Arial,'Microsoft YaHei',sans-serif;
+    line-height: 70px;
+}
+.idx-header .ids-actions ul li:first-child{
+    margin-left: 0;
+}
+
+.idx-header .ids-actions ul li a{
+    display: flex;
+    align-items: center;
+    color: #222;
+    text-decoration: none;
+}
+
+.idx-header .ids-actions ul li span.image{
+    margin-right: 6px;
+    border-radius: 50%;
+    border: 1px solid #4e71f2;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+}
+.idx-header .ids-actions ul li span.image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.idx-header .idx-main{
+    display: flex;
+    align-items: center;
+}
+.idx-header .idx-main .logo{
+    display: block;
+    height: 33px;
+    width: 101px;
+}
+.idx-header .idx-main .logo img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.idx-header .idx-main .idx-search{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    height: 40px;
+    line-height: 1;
+}
+
+.idx-header .idx-main .idx-search .keyword-warpper{
+    border: 2px solid #c4c7ce;
+    border-right: 0;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    width: 560px;
+    height: 100%;
+    flex: 1;
+}
+
+.idx-header .idx-main .idx-search .keyword-warpper input[name=keyword]{
+    outline: none;
+    padding: 10px 14px 10px 14px;
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.idx-header .idx-main .idx-search .keyword-warpper input[name=keyword]:active,
+.idx-header .idx-main .idx-search .keyword-warpper input[name=keyword]:focus,
+.idx-header .idx-main .idx-search .keyword-warpper input[name=keyword]:visited
+{
+    background: transparent;
+}
+
+.idx-header .idx-main .idx-search .keyword-warpper .search-keyframe-modal{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+.idx-header .idx-main .idx-search .search-btn{
+    display: block;
+    text-decoration: none;
+    width: 112px;
+    height: 40px;
+    text-align: center;
+    background: #4e6ef2;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+
+
+
+.idx-tab{
+    padding-left: 140px;
+    padding-top: 61px;
+    line-height: 1;
+}
+.idx-tab ul{
+    display: flex;
+    align-items: center;
+}
+.idx-tab ul li{
+    border-bottom: 2px solid transparent;
+    line-height: 28px;
+    margin-right: 15px;
+}
+.idx-tab ul li a{
+    color: #626675;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.idx-tab ul li a::before{
+    color: #C0C2C8;
+    content: "口";
+    margin-right: 2px;
+}
+
+.idx-tab ul li.active{
+    border-bottom-color: #4e6ef2;
+}
+
+.idx-tab ul li.active a,
+.idx-tab ul li.active a::before,
+.idx-tab ul li a:hover::before
+{
+    color: #222;
+}
+
+.idx-result{
+    padding-left: 140px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #99a2aa;
+}
+
+
+.main {
+    width: 1088px;
+    margin-left: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+.main .main-left{
+    width: 560px;
+}
+
+.main .main-left .card{
+    margin-bottom: 20px;
+}
+
+.main .main-left .card .card-title{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 4px;
+    line-height: 22px;
+}
+.main .main-left .card .card-title a{
+    color: #2440b3;
+    text-decoration: underline;
+}
+.main .main-left .card .card-title a:hover{
+    color: #315efb;
+}
+.main .main-left .card .card-title a:visited{
+    color: #771caa;
+}
+
+
+.main .main-left .card .card-content{
+    display: flex;
+    align-items: text-top;
+    margin-top: 10px;
+}
+
+.main .main-left .card .card-content .card-content-left{
+    
+    margin-right: 16px;
+}
+.main .main-left .card .card-content .card-content-left a{
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.main .main-left .card .card-content .card-content-left a img{
+    display: block;
+    width: 100%;
+}
+.main .main-left .card .card-content .card-content-right{
+    flex: 1;
+}
+
+.main .main-left .card .card-content .card-content-right .desc{
+    font-size: 13px;
+    color: #333;
+    height: 51px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor:pointer;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.main .main-left .card .card-content .card-content-right .label{
+    margin-top: 4px;
+}
+.main .main-left .card .card-content .card-content-right .label ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1px;
+    padding-top: 1px;
+    /* justify-content: space-around; */
+}
+.main .main-left .card .card-content .card-content-right .label ul li{
+    line-height: 1;
+    font-size: 13px;
+    color: #2440b3;
+    border: 1px solid #2440b3;
+    background: #e6f7ff;
+    padding: 2px 5px;
+    margin-left: -1px; 
+    margin-top: -1px;
+}
+.main .main-left .card .card-content .card-content-right .column{
+    margin-top: 4px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main .main-left .card .card-content .card-content-right .column .update-time,
+.main .main-left .card .card-content .card-content-right .column .classify{
+    color: #9195A3;
+}
+.main .main-left .card .card-content .card-content-right .column .classify a{
+    color: #2440b3;
+}
+.main .main-left .card .card-content .card-content-right .column .classify a:hover{
+    color: #315efb;
+}
+.main .main-left .card .card-content .card-content-right .column .classify a:visited{
+    color: #771caa;
+}
+
+
+.main .main-left .card .card-content .card-content-right .column .avatar{
+    display: flex;
+    align-items: center;
+    color: #626675;
+    text-decoration: none;
+}
+
+.main .main-left .card .card-content .card-content-right .column .avatar .image{
+    margin-right: 6px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    display: inline-block;
+}
+.main .main-left .card .card-content .card-content-right .column .avatar .image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main .main-left .card .card-content .card-content-right .column .actions{
+    display: flex;
+    align-items: center;
+}
+
+.main .main-left .card .card-content .card-content-right .column .actions a{
+    color: #2440b3;
+    margin-left: 10px;
+}
+.main .main-left .card .card-content .card-content-right .column .actions a:hover{
+    color: #315efb;
+}
+.main .main-left .card .card-content .card-content-right .column .actions a:visited{
+    color: #771caa;
+}
+
+.page{
+    background: #F5F5F6;
+}
+.page .page-container{
+    padding: 14px 0;
+    padding-left: 140px;
+    overflow: hidden;
+}
+.page .page-container li{
+    float: left;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+.page .page-container li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #3951B3;
+    font-size: 14px;
+    text-decoration: none;
+}
+.page .page-container li.active,
+.page .page-container li:hover{
+    background: #4E6EF2;
+}
+.page .page-container li.active a,
+.page .page-container li:hover a{
+    color: #fff;
+}
+.page .page-container li.prev,
+.page .page-container li.next{
+    width: 80px;
+}
+
+.page .help{
+    padding: 14px 0;
+    padding-left: 140px;
+}
+
+
+
+
+
+
+
+
+
+
+.container.container-s .idx-header .idx-main .idx-search .keyword-warpper{
+    width: 460px;
+}
+.container.container-s .main{
+    width: 944px;
+}
