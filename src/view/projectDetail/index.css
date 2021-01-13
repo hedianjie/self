@@ -13,6 +13,10 @@
     text-decoration: none;
     margin-right: 12px;
 }
+.package-more a:hover{
+    color: #4e6ef2;
+    text-decoration: underline;
+}
 
 .main{
     width: 750px;
@@ -71,8 +75,8 @@
 .main .package-label .group-content li{
     line-height: 1;
     font-size: 13px;
-    color: #2440b3;
-    border: 1px solid #2440b3;
+    color: #4e6ef2;
+    border: 1px solid #4e6ef2;
     background: #e6f7ff;
     padding: 2px 5px;
     margin-left: -1px;
@@ -128,16 +132,16 @@
     margin-left: 0;
 }
 .main .package-nav-tab .nav-tab ul li.active{
-    border-color: #2440b3;
-    color: #2440b3;
+    border-color: #4e6ef2;
+    color: #4e6ef2;
     position: relative;
 }
 .main .package-nav-tab .nav-tab ul li.active::after{
     content: '';
     width: 0px;
     height: 0px;
-    border: 3px solid #2440b3;
-    border-color: transparent transparent #2440b3 transparent;
+    border: 3px solid #4e6ef2;
+    border-color: transparent transparent #4e6ef2 transparent;
     position: absolute;
     left: 0;
     right: 0;
@@ -257,6 +261,9 @@
     display: block;
     text-decoration: none;
 }
+.right-content .user-info .info .name:hover{
+    color: #4e6ef2;
+}
 .right-content .user-info .info .signature{
     margin-top: 4px;
     font-size: 12px;
@@ -335,6 +342,7 @@
     font-size: 14px;
     line-height: 18px;
     height: 36px;
+    color: #222;
     margin-bottom: 6px;
     word-break: break-word;
     overflow: hidden;
@@ -342,6 +350,13 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+.right-content .productions-info .info-item .content .name a{
+    color: #222;
+    text-decoration: none;
+}
+.right-content .productions-info .info-item .content .name a:hover{
+    color: #4e6ef2;
 }
 .right-content .productions-info .info-item .content .desc{
     font-size: 12px;

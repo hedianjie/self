@@ -12,7 +12,7 @@ ul,li,dl,dt,dd,ol{
 
 .cut-title{
     position: relative;
-    background: #f4f5f7;
+    background: #fafafa;
     color: #99a2aa;
     font-size: 14px;
     padding-left: 13px;
@@ -42,6 +42,11 @@ ul,li,dl,dt,dd,ol{
     border: 1px solid #dcdee2;
     background: #fff;
 
+}
+.btn.disabled{
+    background: #e5e9ef;
+    color: #6d757a;
+    border-color: transparent;
 }
 .btn.btn-lg{
     display: block;
@@ -253,8 +258,11 @@ ul,li,dl,dt,dd,ol{
     color: #99a2aa;
     text-decoration: none;
 }
+.common-info .common-item .con .more > a:hover{
+    color: #4e6ef2;
+}
 .common-info .common-item .con .more > a i{
-    margin-right: 5px;
+    margin-right: 2px;
 }
 .common-info .common-item .reply-info .common-item{
     padding: 20px 0 0 0;
@@ -331,3 +339,4 @@ ul,li,dl,dt,dd,ol{
     height: 100%;
     display: block;
 }
+@import './font/iconfont.css'

@@ -154,12 +154,6 @@
     font-size: 14px;
 }
 
-.idx-tab ul li a::before{
-    color: #C0C2C8;
-    content: "口";
-    margin-right: 2px;
-}
-
 .idx-tab ul li.active{
     border-bottom-color: #4e6ef2;
 }
@@ -176,6 +170,7 @@
     line-height: 40px;
     font-size: 13px;
     color: #99a2aa;
+    margin-bottom: 5px;
 }
 
 
@@ -183,6 +178,7 @@
     width: 1088px;
     margin-left: 140px;
     display: flex;
+    margin-bottom: 64px;
     justify-content: space-between;
 }
 .main .main-left{
@@ -190,7 +186,7 @@
 }
 
 .main .main-left .card{
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .main .main-left .card .card-title{
@@ -222,10 +218,10 @@
     margin-right: 16px;
 }
 .main .main-left .card .card-content .card-content-left a{
-    display: inline-block;
-    width: 128px;
-    height: 128px;
-    border-radius: 10px;
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
     overflow: hidden;
 }
 .main .main-left .card .card-content .card-content-left a img{
@@ -249,7 +245,7 @@
 }
 
 .main .main-left .card .card-content .card-content-right .label{
-    margin-top: 4px;
+    margin-top: 6px;
 }
 .main .main-left .card .card-content .card-content-right .label ul{
     display: flex;
@@ -328,6 +324,9 @@
 }
 
 .page{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background: #F5F5F6;
 }
 .page .page-container{

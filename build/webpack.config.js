@@ -114,10 +114,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
+                    loader: 'babel-loader'
                 },
                 exclude: /[\\/]node_module[\\/]/
             }
@@ -137,7 +134,13 @@ module.exports = {
         port: '8877',
         host: 'localhost',
         open: true,
-        publicPath: '/'
+        publicPath: '/',
+        proxy: {
+            '/': {
+                target: 'http://localhost:3000'
+            }
+        }
+        
     },
 
     plugins: [

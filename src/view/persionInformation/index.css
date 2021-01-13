@@ -1,10 +1,85 @@
 html{
-    background:#f4f5f7
+    background:#fafafa
 }
 
 .hidden{
     display: none;
 }
+
+.box-header .search-input{
+    height: 26px;
+    border: 1px solid transparent;
+    border-radius: 26px;
+    padding: 0 12px;
+    transition: all .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    display: flex;
+    align-items: center;
+    
+}
+.box-header .search-input input[name=search-input] {
+    border: none;
+    outline: none;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    width: 0;
+    padding-right: 0;
+    transition: all .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    
+}
+.box-header .search-input label{
+    display: inline-block;
+    font-size: 20px;
+    color: #999;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    transition: all .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    cursor: pointer;
+}
+.box-header .search-input:hover{
+    border-color: #4e6ef2;
+}
+.box-header .search-input:hover input[name=search-input]{
+    padding-right: 12px;
+    width: 108px;
+}
+.box-header .search-input:hover label{
+    color: #4e6ef2;
+}
+
+.box-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 26px;
+}
+.box-header .caption{
+    font-size: 16px;
+    color: #222;
+}
+.box-header .actions{
+    display: flex;
+    align-items: center;
+}
+.box-header .actions > *{
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.box-header .actions > a:not(.btn){
+    color: #999;
+    font-size: 14px;
+    text-decoration: none;
+}
+.box-header .actions > a:not(.btn):hover{
+    color: #4e6ef2
+}
+.box-header .actions > a.iconfont{
+    font-size: 20px;
+}
+
 .main-header{
     border: 1px solid #e5e9ef;
     background: #fff;
@@ -16,6 +91,7 @@ html{
     /* background-image: url('https://static.zhihu.com/heifetz/assets/guide-cover-1.4423ce0f.jpg'); */
 
 }
+
 .main-header .bg img{
     position: absolute;
     top: 0;
@@ -104,10 +180,11 @@ html{
     padding-top: 0;
     background: #fff;
     flex: 1;
+    overflow: hidden;
 }
 .main-left .title-nav-tab{
     position: relative;
-    border-bottom: 3px solid #f4f5f7;
+    border-bottom: 3px solid #fafafa;
     display: flex;
     align-items: center;
 }
@@ -118,7 +195,7 @@ html{
     position: absolute;
     left: -21px;
     bottom: -3px;
-    background: #f4f5f7;
+    background: #fafafa;
 }
 .main-left .title-nav-tab::after{
     content: '';
@@ -127,7 +204,7 @@ html{
     position: absolute;
     right: -21px;
     bottom: -3px;
-    background: #f4f5f7;
+    background: #fafafa;
 }
 .main-left .title-nav-tab li{
     line-height: 44px;
@@ -159,44 +236,11 @@ html{
     display: block;
 }
 
-.my-project .header{
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.my-project .header .caption .search-input{
-    border: 1px solid #c4c7ce;
-    padding: 6px 14px;
-    font-size: 12px;
-    border-radius: 6px;
-}
-.my-project .header .caption .search-input input[name=search-input] {
-    outline: none;
-    border: none;
-    font-size: 12px;
-    width: 150px;
-}
-.my-project .header .actions{
-    display: flex;
-    align-items: center;
-}
-.my-project .header .actions > .btn,
-.my-project .header .actions > a{
-    margin-left: 10px;
-}
-.my-project .header .actions > a{
-    color: #999;
-    font-size: 14px;
-    text-decoration: none;
-}
-.my-project .header .actions > a:hover{
-    color: #4e6ef2
-}
 .my-project .project-content{
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
+    margin-top: 20px;
 }
 
 .my-project .project-content .item{
@@ -229,6 +273,13 @@ html{
     margin-bottom: 10px;
     height: 40px;
     line-height: 20px;
+}
+.my-project .project-content .item .info .name a{
+    color: #222;
+    text-decoration: none;
+}
+.my-project .project-content .item .info .name a:hover{
+    color: #4e6ef2;
 }
 .my-project .project-content .item .info .package{
     font-size: 14px;
@@ -306,6 +357,22 @@ html{
     flex: 1;
     margin-right: 14px;
 }
+.my-reply.common-info .common-item .con .origin-text{
+    color: #999;
+    border-left: 2px solid #e7e7e7;
+    margin: 6px 0 10px;
+    padding-left: 6px;
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 16px;
+}
 .my-reply.common-info .common-item .before-con{
     font-size: 14px;
     color :#999;
@@ -342,7 +409,7 @@ html{
 }
 
 .my-message .message-item{
-    border-bottom: 3px solid #f4f5f7;
+    border-bottom: 3px solid #fafafa;
     position: relative;
     padding: 24px 0;
 }
@@ -364,7 +431,7 @@ html{
     position: absolute;
     left: -21px;
     bottom: -3px;
-    background: #f4f5f7;
+    background: #fafafa;
 }
 .my-message .message-item::after{
     content: '';
@@ -373,7 +440,7 @@ html{
     position: absolute;
     right: -21px;
     bottom: -3px;
-    background: #f4f5f7;
+    background: #fafafa;
 }
 .my-message .message-item .header{
     line-height: 24px;
@@ -414,9 +481,193 @@ html{
     text-decoration: none;
 }
 
+.my-attention .attention-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 26px;
+}
+.my-attention .attention-header .caption{
+    font-size: 16px;
+    color: #222;
+}
+.my-attention .attention-header .actions{
+    display: flex;
+    align-items: center;
+}
+.my-attention .attention-header .actions > *{
+    margin-left: 10px;
+}
+
+.my-attention .attention-content .attention-item{
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e9ef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-attention .attention-content .attention-item:last-child{
+    border: none;
+}
+.my-attention .attention-content .attention-item .user-avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.my-attention .attention-content .attention-item .user-avatar img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.my-attention .attention-content .attention-item .info{
+    flex: 1;
+
+}
+.my-attention .attention-content .attention-item .info .name{
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.my-attention .attention-content .attention-item .info .name a{
+    color: #4e6ef2;
+    text-decoration: none;
+}
+.my-attention .attention-content .attention-item .info .desc{
+    font-size: 12px;
+    line-height: 14px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.my-attention .attention-content .attention-item .actions{
+    display: flex;
+    margin-left: 25px;
+}
+.my-attention .attention-content .attention-item .actions > *:first-child{
+    margin-left: 0;
+}
+.my-attention .attention-content .attention-item .actions > *{
+    margin-left: 10px;
+}
+
+.my-collect .collect-content{
+    margin-top: 20px;
+}
+.my-collect .collect-content .item{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.my-collect .collect-content .item:last-child{
+    margin-bottom: 10px;
+}
+.my-collect .collect-content .item .image{
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.my-collect .collect-content .item .image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.my-collect .collect-content .item .info{
+    flex: 1;
+    overflow: hidden;
+}
+.my-collect .collect-content .item .info .name{
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+.my-collect .collect-content .item .info .name a{
+    color: #222;
+    text-decoration: none;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+.my-collect .collect-content .item .info .name a:hover{
+    color: #4e6ef2;
+}
+.my-collect .collect-content .item .info .desc{
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+}
+.my-collect .collect-content .item .info .version{
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 5px;
+}
+.my-collect .collect-content .item .info .light{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.my-collect .collect-content .item .info .version .tag{
+    margin-left: 10px;
+}
+.my-collect .collect-content .item .info .more{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.my-collect .collect-content .item .info .more .user{
+    display: flex;
+    align-items: center;
+    line-height: 26px;
+}
+.my-collect .collect-content .item .info .more .user .avatar{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.my-collect .collect-content .item .info .more .user .avatar img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.my-collect .collect-content .item .info .more .user .user-name{
+    color: #626675;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.my-collect .collect-content .item .info .more .user .user-name:hover{
+    color: #4e6ef2;
+}
+.my-collect .collect-content .item .info .more .time{
+    font-size: 13px;
+    color: #999;
+}
+.my-collect .collect-content .item .actions{
+    line-height: 130px;
+    margin-left: 20px;
+}
 
 .main-right{
     width: 250px;
     margin-left: 10px;
-    height: 100px;
+    background: #fff;
+    border: 1px solid #e5e9ef;
 }
