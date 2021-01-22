@@ -2,10 +2,6 @@
 
 
 {
-  "include": [
-    "./src/**/*.ts",
-    "./src/**/*.d.ts",
-  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
 

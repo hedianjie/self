@@ -136,9 +136,11 @@ module.exports = {
         open: true,
         publicPath: '/',
         proxy: {
+            
             '/': {
-                target: 'http://localhost:3000'
-            }
+                target: 'http://localhost:3000',
+            },
+           
         }
         
     },
