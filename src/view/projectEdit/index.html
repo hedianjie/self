@@ -60,10 +60,7 @@
                 <a href="javascript:void(0)" class="btn btn-primary">上传文件</a>
                 <p class="tip">上传文件前，请先阅读 <a href="javascript:void(0)">《上传手册》</a>，可以减少很多繁琐步骤<br/>请不要上传无关的文件！</p>
             </div>
-            <div class="editor-form">
-
-                
-
+            <div class="editor-form active">
 
                 <h2 class="classify-title">上传文件</h2>
                 <div class="form-item upload-item">
@@ -78,7 +75,14 @@
                                     <a href="javascript:void(0)" class="btn btn-primary btn-sm">删除</a>
                                 </div>
                             </div>
-                            <div class="file-info">
+                            <div class="main-right">
+                                <input type="file" id="file">
+                                <div id="info"></div>
+                                <div id="progress"></div>
+                
+                
+                            </div>
+                            <!-- <div class="file-info">
                                 <span class="i"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAqJJREFUSA29Vs1rE0EUf7NpsAdBSqKo8RPEDxBqA4IeREo/QIoQaE+aevEvEERBPErx4ElvehFbv0CheGwiKEWMCKme/KqKSurFGjxUhZCM7zfNDONmd7u7iQaWeTPv936/eZO3O09QiN/gixN9kmSOZOOQIJFheyPC2F5gu0LCmWV7urjvxtxKdCIIMFw+PlYX4gJJuSsIZ3xCvElIeX4me/OeWXMZnoLDL8e3N+ryFu/+gAsfasrZlpyEODbTO/nRHdAiOFQeP8xC9/lJucFR5iy6yM9oITv52I77SxBiDZIFIpm0QfFtUXNIDNmiRrB5jM/bzcy9OWTKx7tfH6+jAc3/rK1j1Fz2iATArdeUIKqRHbEKRBMFjeCGBjBKUJV+UEQHfFpDqJe6US+3w7lp1Xo6mh6gR9Vn9OrnvC+VcBLZLk4354sI4djanaFLO85RT3INbeveTGffX/SNgpaDz5UvYgWHLQZo4ftscARrOVy2mWCUt9ctdvnLdSpWn3iDm6vQcjhN9SEORLqcXmIPvhVdqNYptMx72OpeXhlbd4Tu7L1CI6l+tRBXbJlNyC5OE1fMTj/B3tV7KJ3soVNbTtLaZIpG0v2qQIDHMYbJTHPzZ+0rjrSiF7zGawt3qVr7oVz5DbnYYiCAFn9bncDS+vy7QqfnJ2ip/svsJ2pmJpC1UKXTZsHH+MSiZ95N0NulD3S1cjvSMdqU0FK3xcBc/nXoW91miGJzN/Cwb2q3qlK0BVFi42C1hrkPB8v5p/yn/pMbg4+yVMxOHcRGzXuIHoQdi3F2HxQDTnBrjBHEjczOUW7+atrZ/ihq4NS3PfiMICboPdCDdCJTlZmrn2kRNKLcg3BACfM4P8Sij7GbJ81jikYv2ON/a4RtUdidbPX/ALgJDJpptSuxAAAAAElFTkSuQmCC" width="14px" height="14" alt=""></span>
                                 <span>上传完成</span>
                                 <span>上传进度：8.4M / 16M</span>
@@ -87,7 +91,7 @@
                             </div>
                             <div class="file-progress">
                                 <div class="progress"></div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -125,8 +129,30 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="form-item base-image">
-                    <div class="form-label">上传示例图片<span class="tip">（示例图片第一张将作为封面图）</span></div>
+                    <div class="form-label">上传封面图</div>
+                    <div class="form-content">
+                        <div class="image-warpper">
+                            <!-- <div class="image-item">
+                                <img src="/assets/image.jpg" alt="">
+                                <div class="opacity">
+                                    <a href="javascript:void(0)"><i class="iconfont icon-browse"></i></a>
+                                    <a href="javascript:void(0)"><i class="iconfont icon-edit"></i></a>
+                                    <a href="javascript:void(0)"><i class="iconfont icon-ashbin"></i></a>
+                                </div>
+                            </div> -->
+                            <div class="image-item image-upload">
+                                <input type="file" name="file">
+                                <svg class="icon" fill="currentColor" viewBox="0 0 24 24" width="42" height="42"><path d="M20.094 6S22 6 22 8v10.017S22 20 19 20H4.036S2 20 2 18V7.967S2 6 4 6h3s1-2 2-2h6c1 0 2 2 2 2h3.094zM12 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0 1.5a5 5 0 1 0-.001-10.001A5 5 0 0 0 12 17.5zm7.5-8a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill-rule="evenodd"></path></svg>
+                                <p>上传图片</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-item base-image">
+                    <div class="form-label">上传示例图片</div>
                     <div class="form-content">
                         <div class="image-warpper">
                             <div class="image-item">
@@ -182,19 +208,40 @@
                 <div class="form-item base-editor">
                     <div class="form-label">
                         <div class="nav-item active">编辑文档</div>
-                        <div class="nav-item">预览文档</div>
-                        <div id="btn" class="nav-item">提交</div>
+                        <div id="btn" class="nav-item">预览文档</div>
+                        <div class="nav-item">上传图片<span class="tip">已上传 3 张图片</span></div>
                     </div>  
                     <div class="form-content">
                         <div id="textarea" class="editor" contenteditable="true" placeholder="请填写说明文档，使用markdown语法编写"></div>
                         <div id="editor" class="markdown-body"></div>
+                        <div id="markdown-file-img" class="markdown-body">
+                            <div class="form-item base-image">
+                                <div class="form-content">
+                                    <div class="image-warpper">
+                                        <div class="image-item">
+                                            <img src="/assets/image.jpg" alt="">
+                                            <div class="opacity">
+                                                <a href="javascript:void(0)"><i class="iconfont icon-browse"></i></a>
+                                                <a href="javascript:void(0)"><i class="iconfont icon-edit"></i></a>
+                                                <a href="javascript:void(0)"><i class="iconfont icon-ashbin"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="image-item image-upload">
+                                            <input type="file" name="file">
+                                            <svg class="icon" fill="currentColor" viewBox="0 0 24 24" width="42" height="42"><path d="M20.094 6S22 6 22 8v10.017S22 20 19 20H4.036S2 20 2 18V7.967S2 6 4 6h3s1-2 2-2h6c1 0 2 2 2 2h3.094zM12 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0 1.5a5 5 0 1 0-.001-10.001A5 5 0 0 0 12 17.5zm7.5-8a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" fill-rule="evenodd"></path></svg>
+                                            <p>上传图片</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="form-item base-confirm">
                     <div class="form-content">
-                        <a href="javascript:void(0)" class="btn btn-primary">保存</a>
+                        <a id="submit" href="javascript:void(0)" class="btn btn-primary">保存</a>
                         <a href="javascript:void(0)" class="btn btn-default">取消</a>
                     </div>
                 </div>

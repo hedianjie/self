@@ -132,68 +132,27 @@ $(function(){
     })
 })
 // 登录
-// $.ajax({
-//     type: 'post',
-//     url: '/login',
-//     data: {
-//         login_name: 'Hedianjie2112.',
-//         pwd: '123321'
-//     },  
-//     success(result) {
-//         // $.ajax({
-//         //     url: '/user',
-//         //     success() {
-//         //         $.ajax({
-//         //             url: '/login/logout',
-//         //             success() {
-//         //                 $.ajax({
-//         //                     url: '/user',
-//         //                 });
-//         //             }
-//         //         });
-//         //     }
-//         // });
-        
-//     }
-// })
-
-$(function(){
-
-    
-})
-// 注册
 $.ajax({
     type: 'post',
-    url: '/login/register',
+    url: '/login',
     data: {
         login_name: 'Hedianjie2112.',
         pwd: '123321'
     },  
     success(result) {
+        // $.ajax({
+        //     url: '/user',
+        //     success() {
+        //         $.ajax({
+        //             url: '/login/logout',
+        //             success() {
+        //                 $.ajax({
+        //                     url: '/user',
+        //                 });
+        //             }
+        //         });
+        //     }
+        // });
         
     }
 })
-
-// 用户信息
-// $.ajax({
-//     type: 'get',
-//     url: '/user',
-//     // data: {
-//     //     login_name: 'hedianjie2112.',
-//     //     pwd: '123321'
-//     // },  
-//     success(result) {
-        
-//     }
-// });
-
-
-// 登出
-// $.ajax({
-//     url: '/login/logout',
-//     success() {
-//         $.ajax({
-//             url: '/user',
-//         });
-//     }
-// });
